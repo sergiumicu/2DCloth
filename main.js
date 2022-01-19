@@ -11,11 +11,11 @@ function handleResize(){
     sW = window.innerWidth;
     sH = window.innerHeight;
     var size = Math.min(sW, sH);
-    canv.width = size;
-    canv.height = size;
+    canv.width = sW;
+    canv.height = sH;
 
     var ctx = canv.getContext("2d");
-    c = new Cloth(20, 10, size);
+    c = new Cloth(20, 10, sW, sH, size);
 
     lastUpdate = (new Date()).getTime();
     a = setInterval(()=>{update(ctx)}, 10);

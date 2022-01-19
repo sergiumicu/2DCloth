@@ -1,15 +1,15 @@
 const dotSize = 3;
 
 class Cloth{
-    constructor(width, height, canvasSize){
+    constructor(width, height, sW, sH, canvasSize){
         this.width = width;
         this.height = height;
         this.size = Math.max(width, height);
         this.points = [];
         this.lines = [];
 
-        var dx = dotSize + (canvasSize - canvasSize / this.size / 1.5 * (width - 1)) / 2;
-        var dy = dotSize + (canvasSize - canvasSize / this.size / 1.5 * (height - 1)) / 2 * 0.5;
+        var dx = dotSize + sW/2 - width * canvasSize / this.size / 3;
+        var dy = dotSize + sH/2 - height * canvasSize / this.size / 2;
 
         for(var i = 0; i < width; i++){ //make points
             var temp = [];
