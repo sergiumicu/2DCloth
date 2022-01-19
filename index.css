@@ -10,7 +10,7 @@ body{
 }
 
 #canv{
-    background: red;
+    background: lightgray;
     width: 100vmin;
     height: 100vmin;
 }
